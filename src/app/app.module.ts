@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
-import { ProfileComponent } from './pages/profile/profile.component';
 import { AuthService } from './services/auth.service';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { RequireAmonGuardService } from './guards/require-amon-guard.service';
@@ -19,7 +18,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 const routes: Routes = [
   { path: 'signup', component: SignupPageComponent, canActivate: [RequireAmonGuardService] },
   { path: 'login', component: LoginPageComponent, canActivate: [RequireAmonGuardService] },
-  { path: 'profile', component: ProfileComponent, canActivate: [RequireUserGuard] }
+  { path: 'search', component: SearchPageComponent, canActivate: [RequireUserGuard] }
 ];
 
 
@@ -27,7 +26,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     SignupPageComponent,
-    ProfileComponent,
+    SearchPageComponent,
     LoginPageComponent,
     SearchPageComponent
   ],
