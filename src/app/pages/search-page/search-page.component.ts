@@ -10,15 +10,31 @@ import { Router } from '@angular/router';
 export class SearchPageComponent implements OnInit {
 
   constructor(private searchArtist: SearchArtistService, private router: Router) { }
+  feedbackEnabled = false;
+  error = null;
+  processing = false;
+  event: string;
 
   ngOnInit() {
   }
 
   submitForm(searchForm) {
     console.log(searchForm);
-  }
+    this.error = '';
+    this.feedbackEnabled = true;
+    if (searchForm.valid) {
+      this.processing = true;
+      this.searchArtist.submit(this.event)
+        .then((result) => {
+          this.router.navigate(['/search/events']);
+        })
+        .catch((err) => {
+          this.error = err.error;
+          this.processing = false;
+          this.feedbackEnabled = false;
+        });
 
-}
+    }
 
 // ANGULAR
 // primero lograr capturar el input en este TS file.
