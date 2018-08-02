@@ -20,7 +20,9 @@ const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'signup', component: SignupPageComponent, canActivate: [RequireAmonGuardService] },
   { path: 'login', component: LoginPageComponent, canActivate: [RequireAmonGuardService] },
-  { path: 'search', component: SearchPageComponent, canActivate: [RequireUserGuard] }
+  { path: 'search', component: SearchPageComponent, canActivate: [RequireUserGuard] },
+  { path: 'search/event', component: SearchPageComponent, canActivate: [RequireUserGuard] }
+
 ];
 
 

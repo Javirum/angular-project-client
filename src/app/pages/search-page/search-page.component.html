@@ -1,8 +1,8 @@
 <div class="box">
   <h1>Search for an event:</h1>
-  <form (ngSubmit)="submitForm(form)">
+  <form (ngSubmit)="submitForm(myForm)" #SearchForm="ngForm">
     <div>
-      <input type="text" name="search" placeholder="Search for a band: e.g Rolling Stones" id="searchBar">
+      <input type="text" [(ngModel)]="artist" required name="search" placeholder="Search for a band: e.g Rolling Stones" id="searchBar">
     </div>
     <div>
       <button type="submit">Search</button>
