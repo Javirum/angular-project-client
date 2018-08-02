@@ -57,11 +57,26 @@ background-color: black;
   background-color: white;
 }
 
+.nine {
+  grid-column: 5;
+  grid-row: 4;
+  background-color: red;
+}
+
 .home-text {
   text-align: center;
 }
 
-h2 {
+h3 {
   padding-top: 20px;
+}
+
+.cloud {
+  margin-left: 25%;
+}
+
+.art {
+  padding-top: 20px;
+
 }
 

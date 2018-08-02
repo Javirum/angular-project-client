@@ -14,6 +14,7 @@ import { RequireAmonGuardService } from './guards/require-amon-guard.service';
 import { RequireUserGuard } from './guards/require-user-guard.service';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { EventPageComponent } from './pages/event-page/event-page.component';
 
 // Components
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupPageComponent, canActivate: [RequireAmonGuardService] },
   { path: 'login', component: LoginPageComponent, canActivate: [RequireAmonGuardService] },
   { path: 'search', component: SearchPageComponent, canActivate: [RequireUserGuard] },
-  { path: 'search/event', component: SearchPageComponent, canActivate: [RequireUserGuard] }
+  { path: 'search/event', component: EventPageComponent, canActivate: [RequireUserGuard] }
 
 ];
 
@@ -33,7 +34,8 @@ const routes: Routes = [
     SearchPageComponent,
     LoginPageComponent,
     SearchPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    EventPageComponent
   ],
   imports: [
     BrowserModule,
