@@ -6,6 +6,10 @@
     <div id="menu-links">
       <a href="/signup">Signup / Login</a>
       <a href="/search">Search</a>
+      <a (click)="logout()">logout</a>
+      <div *ngIf="!loading && !!user">
+        <a [routerLink]="['/']">{{user.username}}</a>
+      </div>
     </div>
   </div>
 </header>

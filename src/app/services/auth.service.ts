@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-// import { Subject } from 'rxjs/Subject';
-// import 'rxjs/add/operator/toPromise';
+// import { Observable } from 'rxjs/Observable';
+import { Subject } from '../../../node_modules/rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +10,22 @@ import { HttpClient, HttpResponse } from '@angular/common/http';
 export class AuthService {
 
   private user: any;
-  // private userChange: Subject<any> = new Subject();
+  private userChange: Subject<any> = new Subject();
   private API_URL = 'http://localhost:3000/auth';
+
+  userChange$: Observable<any> = this.userChange.asObservable();
+
 
 
   private baseUrl = 'http://localhost:3000/auth';
   constructor(private httpClient: HttpClient) {
   }
 
-  // private setUser(user?: any) {
-  //   this.user = user;
-  //   this.userChange.next(user);
-  //   return user;
-  // }
+  private setUser(user?: any) {
+    this.user = user;
+    this.userChange.next(user);
+    return user;
+  }
 
   me() {
     const options = {
@@ -64,7 +67,7 @@ export class AuthService {
     };
     return this.httpClient.post(`${this.API_URL}/logout`, {}, options)
       .toPromise()
-      .then(() => this.getUser());
+      .then(() => this.setUser());
   }
 
   getUser(): any {
