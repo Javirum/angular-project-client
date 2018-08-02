@@ -1,0 +1,69 @@
+
+
+
+
+/* ---- typography ---- */
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+h1 {
+  font-size: 0.5em;
+}
+
+h2 {}
+
+h3 {}
+
+p {
+  margin: 0;
+}
+
+
+
+/* ---- layout ---- */
+
+/* #site-main {
+  margin-bottom: 60px;
+} */
+
+.container {
+  margin: 0 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.section {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+header  {
+  background-color: black;
+  color: white;
+  padding: 50px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 50px;
+}
