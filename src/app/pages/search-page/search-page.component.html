@@ -9,3 +9,10 @@
     </div>
   </form>
 </div>
+<div *ngIf="events">
+  <ul>
+    <li *ngFor="let event of events">
+      {{ event.name.text }}
+    </li>
+  </ul>
+</div>

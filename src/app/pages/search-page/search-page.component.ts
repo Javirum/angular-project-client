@@ -9,11 +9,13 @@ import { SearchEventsService } from '../../services/search-events.service';
 })
 export class SearchPageComponent implements OnInit {
 
-  constructor(private searchEvents: SearchEventsService, private router: Router) { }
   feedbackEnabled = false;
   error = null;
   processing = false;
   query: string;
+  events: any;
+  constructor(private searchEvents: SearchEventsService, private router: Router) { }
+
 
   ngOnInit() {
   }
@@ -25,7 +27,9 @@ export class SearchPageComponent implements OnInit {
       this.processing = true;
       this.searchEvents.submit(searchForm.value.search)
         .then((result) => {
-          this.router.navigate(['/search/events']);
+          console.log(result);
+          this.events = result;
+          // this.router.navigate(['/search/events']);
         })
         .catch((err) => {
           this.error = err.error;
