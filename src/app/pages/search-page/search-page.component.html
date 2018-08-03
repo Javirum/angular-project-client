@@ -1,11 +1,11 @@
 <div class="box">
   <h1>Search for an event:</h1>
-  <form (ngSubmit)="submitForm(myForm)" #SearchForm="ngForm">
+  <form (ngSubmit)="submitForm(SearchForm)" #SearchForm="ngForm">
     <div>
-      <input type="text" [(ngModel)]="artist" required name="search" placeholder="Search for a band: e.g Rolling Stones" id="searchBar">
+      <input type="text" [(ngModel)]="query" required name="search" placeholder="Search for a band: e.g Rolling Stones" id="searchBar">
     </div>
     <div>
-      <button type="submit">Search</button>
+      <button type="submit" id="eventButton">Search</button>
     </div>
   </form>
 </div>
