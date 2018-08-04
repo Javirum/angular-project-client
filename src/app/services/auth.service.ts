@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+// import { Observable } from 'rxjs/Observable';
 import { Subject } from '../../../node_modules/rxjs';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class AuthService {
   private userChange: Subject<any> = new Subject();
   private API_URL = 'http://localhost:3000/auth';
 
-  userChange$: Observable<any> = this.userChange.asObservable();
+  // userChange$: Observable<any> = this.userChange.asObservable();
 
 
 

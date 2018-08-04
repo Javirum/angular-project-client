@@ -25,6 +25,8 @@ p {
 
 
 
+
+
 /* ---- layout ---- */
 
 /* #site-main {
@@ -37,6 +39,9 @@ p {
   justify-content: space-between;
 }
 
+header {
+  height: 10vh;
+}
 
 .section {
   margin-bottom: 20px;
@@ -50,10 +55,15 @@ p {
   }
 }
 
+#menu-logo img {
+  width: 30%;
+  padding-left: 10px;
+}
+
+
 header  {
   background-color: black;
   color: white;
-  padding: 50px;
 }
 
 header a {
