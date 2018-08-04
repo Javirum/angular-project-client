@@ -12,7 +12,10 @@
 <div *ngIf="events">
   <ul>
     <li *ngFor="let event of events">
-      {{ event.name.text }}
+      <div class="event-card">
+        <h1>{{ event.name.text }}</h1>
+        <button>Buy ticket</button>
+      </div>
     </li>
   </ul>
 </div>
