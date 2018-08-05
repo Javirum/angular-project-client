@@ -124,6 +124,10 @@ h1 {
   text-align: center;
 }
 
+.home-anchors {
+  margin: 10% auto;
+}
+
 h3 {
   padding-top: 20px;
 }
