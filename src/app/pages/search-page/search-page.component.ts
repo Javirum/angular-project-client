@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchEventsService } from '../../services/search-events.service';
+import { SearchFlightService } from '../../services/search-flight.service';
 
 @Component({
   selector: 'app-search-page',
@@ -14,7 +15,7 @@ export class SearchPageComponent implements OnInit {
   processing = false;
   query: string;
   events: any;
-  constructor(private searchEvents: SearchEventsService, private router: Router) { }
+  constructor(private searchEvents: SearchEventsService, private searchFlights: SearchFlightService, private router: Router) { }
 
 
   ngOnInit() {

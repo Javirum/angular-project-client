@@ -14,6 +14,9 @@
     <li *ngFor="let event of events">
       <div class="event-card">
         <h1>{{ event.name.text }}</h1>
+        <div>
+          {{ fligths.locations }}
+        </div>
         <button>Buy ticket</button>
       </div>
     </li>
