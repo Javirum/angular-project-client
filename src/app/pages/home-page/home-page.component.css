@@ -7,6 +7,10 @@
 background-color: black;
 }
 
+h1 {
+  margin-bottom: -10%;
+}
+
 .home-boxes {
   border: 5px solid black;
   padding: 8px;
