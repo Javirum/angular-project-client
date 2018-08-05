@@ -46,17 +46,25 @@ header {
   grid-template-rows: 2;
 }
 
+#logo {
+  font-size: 1.3em;
+  text-decoration: underline;
+  text-decoration-color: #00c1ff;
+  padding-left: 30%;
+  padding-top: 10%;
+}
+
 #signup-nav {
   grid-column: 3;
-  padding-top: 20%;
+  padding-top: 25%;
 }
 
 #login-nav {
- padding-top: 20%;
+ padding-top: 25%;
 }
 
 #explore-nav {
-  padding-top: 20%;
+  padding-top: 25%;
  }
 
 .section {

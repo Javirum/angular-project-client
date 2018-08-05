@@ -148,16 +148,13 @@ a {
 }
 
 i {
-  padding-top: 50px;
+  padding-top: 2%;
   font-size: 2em;
   position: relative;
-  animation: bounce 0.5s;
+  animation: bounce 1s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-  i:hover {
-    border-bottom: 0px;
-  }
 
   @keyframes bounce {
     0% {
