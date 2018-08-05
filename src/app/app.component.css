@@ -33,11 +33,11 @@ p {
   margin-bottom: 60px;
 } */
 
-.container {
+/* .container {
   margin: 0 0px;
   display: flex;
-  justify-content: space-between;
-}
+  justify-content: space-around;
+} */
 
 header {
   height: 10vh;
@@ -96,8 +96,25 @@ header a {
   padding: 0 10px;
 }
 
-footer {
+#site-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: black;
   color: white;
-  padding: 50px;
+  padding: 5%;
 }
+
+#creator {
+
+}
+
+#social-logos {
+  width: 55%;
+}
+
+#social-logos i {
+  padding: 5%;
+  text-align: center;
+}
+
