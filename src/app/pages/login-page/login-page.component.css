@@ -16,7 +16,25 @@ form {
   color: black;
   width: 80%;
   border: 5px solid black;
+  margin-bottom: 17%;
 }
+
+form {
+    animation: pulse 15s infinite;
+}
+  
+  @keyframes pulse {
+    0% {
+      background-color:red;
+    }
+
+    50% {
+      background-color: yellow;
+    }
+    100% {
+      background-color: red;
+    }
+  }
 
 input {
   font-size: 1em;

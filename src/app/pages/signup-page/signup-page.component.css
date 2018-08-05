@@ -1,4 +1,22 @@
 
 form {
   background-color: yellow;
+  margin-bottom: 10%;
+}
+
+form {
+  animation: pulse 15s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color:yellow;
+  }
+
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color:yellow;
+  }
 }
