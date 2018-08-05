@@ -16,14 +16,14 @@ h1 {
   padding: 8px;
 }
 
-.nav {
+/* .nav {
   border: 10px solid white;
   background-color: black;
   padding: 8px;
   grid-column: 1 / 6;
   grid-row: 1;
   height: 10vh;
-}
+} */
 
 .menu {
   grid-column: 2 / 5;

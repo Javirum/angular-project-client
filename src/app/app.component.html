@@ -1,23 +1,10 @@
-<!-- <header id="site-header">
-  <div class="container">
-    <div id="menu-logo">
-      <img src="/assets/images/floight.jpg" alt="">
-    </div>
-    <div id="menu-links">
-      <a href="/signup">Signup / Login</a>
-      <a href="/search">Search</a>
-      <a (click)="logout()">logout</a>
-      <div *ngIf="!loading && !!user">
-        <a [routerLink]="['/']">{{user.username}}</a>
-      </div>
-    </div>
-  </div>
+<header id="site-header">
+  <h1 id="logo">Floight</h1>
 
-  <div class="nav">
-
-  </div>
-
-</header> -->
+  <a href="/signup" id="signup-nav">Signup</a>
+  <a href="/login" id="login-nav">Login</a>
+  <a href="/search" id="explore-nav">Explore</a>
+</header>
 
 <link href="https://fonts.googleapis.com/css?family=Rufina" rel="stylesheet">
 
@@ -25,7 +12,7 @@
   <router-outlet></router-outlet>
 </div>
 
-<!-- <footer id="site-footer">
+<footer id="site-footer">
   <div class="container">
     <div id="creator">
       <p>© Copyright Javier Romero 2018</p>
@@ -38,4 +25,4 @@
       <i class="fab fa-linkedin-in"></i>
     </div>
   </div>
-</footer> -->
+</footer>
