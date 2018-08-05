@@ -2,3 +2,16 @@
 form {
   background-color: #00c1ff
 }
+
+.event-card {
+background-color: white;
+border: 5px solid black;
+margin-bottom: 5%;
+text-decoration: none;
+}
+
+.btn {
+  background-color: yellow;
+  width: 70%;
+} 
+
