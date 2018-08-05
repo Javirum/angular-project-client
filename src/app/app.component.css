@@ -48,7 +48,16 @@ header {
 
 #signup-nav {
   grid-column: 3;
+  padding-top: 20%;
 }
+
+#login-nav {
+ padding-top: 20%;
+}
+
+#explore-nav {
+  padding-top: 20%;
+ }
 
 .section {
   margin-bottom: 20px;
