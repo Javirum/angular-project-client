@@ -217,7 +217,7 @@ i {
   padding-top: 2%;
   font-size: 2em;
   position: relative;
-  animation: move-down 5s;
+  animation: move-down 5s;  
   animation: bounce 1s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;

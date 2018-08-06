@@ -1,8 +1,8 @@
 <div class="forms">
   <form (ngSubmit)="submitForm(SearchForm)" #SearchForm="ngForm">
     <div>
-      <h1>Search for an event:</h1>
-      <input type="text" [(ngModel)]="query" required name="search" placeholder="Search for a band: e.g Rolling Stones" id="searchBar">
+      <h1>Where would you like to travel?</h1>
+      <input type="text" [(ngModel)]="query" required name="search" placeholder="Search for a city, e.g: Barcelona" id="searchBar">
     </div>
     <div>
       <button type="submit" id="eventButton">Search</button>
@@ -10,18 +10,18 @@
   </form>
 </div>
 
-<div class="forms">
-  <div *ngIf="events">
-    <ul>
-      <li *ngFor="let event of events">
-        <div class="event-card">
-          <h1>{{ event.name.text }}</h1>
-          <div>
-            {{ flights[0] | json}}
-          </div>
-          <button class="btn">Buy ticket</button>
+<div *ngIf="events">
+  <ul>
+    <li *ngFor="let event of events">
+      <div class="event-card">
+        <h1>{{ event.name.text }}</h1>
+        <div>
+          {{ flights[0] | json}}
         </div>
-      </li>
-    </ul>
-  </div>
+        <button class="btn" type="submit">Get event ticket</button>
+        <button class="btn" type="submit">Get flight ticket</button>
+      </div>
+    </li>
+  </ul>
+
 </div>

@@ -1,18 +1,23 @@
 
 form {
-  background-color: #00c1ff
+  background-color: #00c1ff;
+  margin-bottom: 15%;
 }
 
 .event-card {
 background-color: white;
 border: 5px solid black;
 margin-bottom: 5%;
-text-decoration: none;
+width: 92%;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .btn {
   background-color: yellow;
-  width: 70%;
+  width: 72%;
   margin-left: 15%;
 } 
 

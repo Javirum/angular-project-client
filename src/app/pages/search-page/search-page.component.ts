@@ -32,7 +32,6 @@ export class SearchPageComponent implements OnInit {
           console.log(result);
           this.events = result[0].events;
           this.flights = result[1].locations;
-          debugger
           // this.router.navigate(['/search/events']);
         })
         .catch((err) => {
@@ -40,7 +39,6 @@ export class SearchPageComponent implements OnInit {
           this.processing = false;
           this.feedbackEnabled = false;
         });
-
     }
 
     // ANGULAR
