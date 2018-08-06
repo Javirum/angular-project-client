@@ -3,6 +3,7 @@
     <div>
       <h1>Where would you like to travel?</h1>
       <input type="text" [(ngModel)]="query" required name="search" placeholder="Search for a city, e.g: Barcelona" id="searchBar">
+      <input type="date" [(ngModel)]="query" required name="from" placeholder="Search for a city, e.g: Barcelona" id="searchBar">
     </div>
     <div>
       <button type="submit" id="eventButton">Search</button>
@@ -16,9 +17,9 @@
       <div class="event-card">
         <h1>{{ event.name.text }}</h1>
         <h2> {{ event.start.local | date: "short" }}</h2>
-        <h4 class="card-description"> {{ event.description.text | slice: 0:400 }}</h4>
+        <h4 class="card-description"> {{ event.description.text | slice: 0:200 }}...</h4>
         <div>
-          {{ flights[0].price | json}}
+          {{ flights[0] | json }}
         </div>
         <button class="btn" type="submit">Get event ticket</button>
         <button class="btn" type="submit">Get flight ticket</button>
