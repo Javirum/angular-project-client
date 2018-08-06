@@ -27,7 +27,7 @@ export class SearchPageComponent implements OnInit {
     this.feedbackEnabled = true;
     if (searchForm.valid) {
       this.processing = true;
-      this.searchEvents.submit(searchForm.value.search)
+      this.searchEvents.submit(searchForm.value)
         .then((result) => {
           console.log(result);
           this.events = result[0].events;

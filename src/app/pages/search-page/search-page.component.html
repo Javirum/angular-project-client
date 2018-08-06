@@ -2,8 +2,8 @@
   <form (ngSubmit)="submitForm(SearchForm)" #SearchForm="ngForm">
     <div>
       <h1>Where would you like to travel?</h1>
-      <input type="text" [(ngModel)]="start" required name="search" placeholder="From" id="searchBar">
-      <input type="text" [(ngModel)]="end" required name="location" placeholder="To">
+      <input type="text" [(ngModel)]="start" required name="location" placeholder="From" id="searchBar">
+      <input type="text" [(ngModel)]="end" required name="search" placeholder="To">
       <input type="date" [(ngModel)]="datestart" required name="from">
       <input type="date" [(ngModel)]="dateend" required name="to">
     </div>
@@ -21,7 +21,7 @@
         <h2> {{ event.start.local | date: "short" }}</h2>
         <h4 class="card-description"> {{ event.description.text | slice: 0:200 }}...</h4>
         <div>
-          {{ flights[0] | json }}
+          {{ flights | json }}
         </div>
         <button class="btn" type="submit">Get event ticket</button>
         <button class="btn" type="submit">Get flight ticket</button>
