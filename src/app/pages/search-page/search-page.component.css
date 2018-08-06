@@ -21,3 +21,8 @@ ul {
   margin-left: 15%;
 } 
 
+.card-description {
+  padding: 5%;
+  font-size: 1em;
+}
+
