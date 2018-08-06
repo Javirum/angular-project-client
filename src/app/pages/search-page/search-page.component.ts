@@ -15,6 +15,7 @@ export class SearchPageComponent implements OnInit {
   processing = false;
   query: string;
   events: any;
+  flights: any;
   constructor(private searchEvents: SearchEventsService, private searchFlights: SearchFlightService, private router: Router) { }
 
 
@@ -29,7 +30,9 @@ export class SearchPageComponent implements OnInit {
       this.searchEvents.submit(searchForm.value.search)
         .then((result) => {
           console.log(result);
-          this.events = result;
+          this.events = result[0].events;
+          this.flights = result[1].locations;
+          debugger
           // this.router.navigate(['/search/events']);
         })
         .catch((err) => {

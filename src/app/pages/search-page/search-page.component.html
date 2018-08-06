@@ -16,9 +16,9 @@
       <li *ngFor="let event of events">
         <div class="event-card">
           <h1>{{ event.name.text }}</h1>
-          <!-- <div>
-            {{ fligths.locations }}
-          </div> -->
+          <div>
+            {{ flights[0] | json}}
+          </div>
           <button class="btn">Buy ticket</button>
         </div>
       </li>
