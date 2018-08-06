@@ -2,8 +2,10 @@
   <form (ngSubmit)="submitForm(SearchForm)" #SearchForm="ngForm">
     <div>
       <h1>Where would you like to travel?</h1>
-      <input type="text" [(ngModel)]="query" required name="search" placeholder="Search for a city, e.g: Barcelona" id="searchBar">
-      <input type="date" [(ngModel)]="query" required name="from" placeholder="Search for a city, e.g: Barcelona" id="searchBar">
+      <input type="text" [(ngModel)]="start" required name="search" placeholder="From" id="searchBar">
+      <input type="text" [(ngModel)]="end" required name="location" placeholder="To">
+      <input type="date" [(ngModel)]="datestart" required name="from">
+      <input type="date" [(ngModel)]="dateend" required name="to">
     </div>
     <div>
       <button type="submit" id="eventButton">Search</button>
