@@ -16,7 +16,7 @@ export class SearchPageComponent implements OnInit {
   query: string;
   events: any;
   flights: any;
-  constructor(private searchEvents: SearchEventsService, private searchFlights: SearchFlightService, private router: Router) { }
+  constructor(private searchEventsService: SearchEventsService, private searchFlights: SearchFlightService, private router: Router) { }
 
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class SearchPageComponent implements OnInit {
     this.feedbackEnabled = true;
     if (searchForm.valid) {
       this.processing = true;
-      this.searchEvents.submit(searchForm.value)
+      this.searchEventsService.submit(searchForm.value)
         .then((result) => {
           console.log(result);
           this.events = result[0].events;

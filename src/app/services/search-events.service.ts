@@ -16,9 +16,9 @@ export class SearchEventsService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(
-      `${this.API_URL}/?flyFrom=${query.location}&to=${query.search}&startdate=${query.from}&enddate=${query.to}&`,
-      options)
+    return this.httpClient.get(`${this.API_URL}?eventsIn=${query.search}`, options)
       .toPromise();
   }
 }
+
+

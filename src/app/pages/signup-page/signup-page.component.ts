@@ -13,6 +13,7 @@ export class SignupPageComponent implements OnInit {
   processing = false;
   username: string;
   password: string;
+  location: string;
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -24,8 +25,8 @@ export class SignupPageComponent implements OnInit {
     this.feedbackEnabled = true;
     if (form.valid) {
       this.processing = true;
-      this.authService.signup(this.username, this.password)
-        .then((result) => {
+      this.authService.signup(this.username, this.password, this.location)
+        .then(() => {
           this.router.navigate(['/search']);
         })
         .catch((err) => {

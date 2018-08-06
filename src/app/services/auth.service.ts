@@ -41,18 +41,17 @@ export class AuthService {
         }
       });
   }
-  signup(username: string, password: string) {
-    console.log(username, password);
+  signup(username: string, password: string, location: string) {
     const options = {
       withCredentials: true
     };
-    const data = { username, password };
+    const data = { username, password, location };
     return this.httpClient.post(`${this.baseUrl}/signup`, data, options)
       .toPromise();
   }
 
   login(username: string, password: string) {
-    console.log(username, password);
+    console.log(username, password, );
     const options = {
       withCredentials: true
     };

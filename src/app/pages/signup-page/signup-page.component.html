@@ -21,6 +21,14 @@
       </div>
     </div>
 
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && locationField.errors}">
+      <input type="string" name="location" [(ngModel)]="location" #locationField="ngModel" [disabled]="processing" placeholder="Location"
+      />
+      <div *ngIf="feedbackEnabled && locationField.errors">
+        <p *ngIf="locationField.errors.required" class="validation">location required</p>
+      </div>
+    </div>
+
     <div class="field submit">
       <button type="submit" [disabled]="processing">Signup</button>
       <div *ngIf="feedbackEnabled && form.invalid">
