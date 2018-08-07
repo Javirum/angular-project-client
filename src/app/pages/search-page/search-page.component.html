@@ -23,7 +23,7 @@
         <!-- <div>
           {{ flights | json }}
         </div> -->
-        <button class="btn" type="submit" [routerLink]="['/event']">Get flight ticket</button>
+        <button class="btn" (click)=handleClick(event)>Get flight ticket</button>
       </div>
     </li>
   </ul>

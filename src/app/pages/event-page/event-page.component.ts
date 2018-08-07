@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchEventsService } from '../../services/search-events.service';
+import { SearchFlightService } from '../../services/search-flight.service';
 
 @Component({
   selector: 'app-event-page',
@@ -6,10 +8,47 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-page.component.css']
 })
 export class EventPageComponent implements OnInit {
+  event: any;
+  eventCity: any;
+  eventDate: any;
+  fromCity: any;
+  toCity: any;
+  startDate: any;
+  endDate: any;
+  loaded: any;
+  flightsOut: any;
+  flightsBack: any;
 
-  constructor() { }
 
+  constructor(private eventService: SearchEventsService, private flightService: SearchFlightService) {
+    this.event = this.eventService.getSavedEvent();
+    this.eventCity = this.eventService.getSavedCity();
+    this.eventDate = this.eventService.getSavedDate();
+    this.toCity = this.eventCity.search;
+    this.startDate = this.eventService.getFlightOutDate();
+    this.endDate = this.eventService.getFlightBackDate();
+
+
+    // this.fromCity = needs to be set from user;
+
+    console.log(this.event);
+    console.log(this.eventCity);
+    this.flightService.getFlights('barcelona', this.toCity, this.startDate)
+      .then(resultsOut => {
+        console.log(resultsOut);
+        this.flightService.getFlights('barcelona', this.toCity, this.endDate)
+          .then(resultsBack => {
+            console.log(resultsBack);
+            this.loaded = true;
+            this.flightsOut = resultsOut.data;
+            this.flightsBack = resultsBack.data;
+
+          })
+      })
+      .catch(error => console.log(error));
+  }
   ngOnInit() {
+
   }
 
 }

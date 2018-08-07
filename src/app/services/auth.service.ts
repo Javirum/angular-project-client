@@ -35,6 +35,9 @@ export class AuthService {
     };
     return this.httpClient.get(`${this.baseUrl}/me`, options)
       .toPromise()
+      .then((result) => {
+        return result;
+      })
       .catch((err) => {
         if (err.status === 404) {
           return null;

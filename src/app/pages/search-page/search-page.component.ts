@@ -28,6 +28,8 @@ export class SearchPageComponent implements OnInit {
     this.feedbackEnabled = true;
     if (searchForm.valid) {
       this.processing = true;
+      this.searchEventsService.saveCity(searchForm.value);
+      this.searchEventsService.saveDate(searchForm.value);
       this.searchEventsService.submit(searchForm.value)
         .then((result: any) => {
           this.events = result.events;
@@ -38,18 +40,11 @@ export class SearchPageComponent implements OnInit {
           this.feedbackEnabled = false;
         });
     }
+  }
 
-    // ANGULAR
-    // primero lograr capturar el input en este TS file.
-    // desde el ts file, debes llamar el service(eso significa que debemos crealo y importarlo comp private dentro del contructor)
-    // debemos ir al service y crear el metodo que nos comunique ocn node para buscarlos eventos.
-
-    // NODE
-    // tenemos que ir a node y craear el API endpoint. /events/search
-    // dentro de este metodo debemos hacer la query a la api, mandando el nombre del artista y nos va a devolver un archivo json.
-
-    // ANGULAR
-    // dentro del ts donde llamamos al service. debemos resolver la promise
-    // (dentro del then), para redireccionar a un paguina donde muestrre los eventos
+  handleClick(event) {
+    this.searchEventsService.saveEvent(event);
+    this.router.navigate(['/event']);
   }
 }
+

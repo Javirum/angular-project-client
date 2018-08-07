@@ -88,7 +88,3 @@ Destination
 Price
 
 
-// return this.httpClient.get(
-//   `${this.API_URL}/?flyFrom=${query.location}&to=${query.search}&startdate=${query.from}&enddate=${query.to}&`,
-//   options)
-//   .toPromise()

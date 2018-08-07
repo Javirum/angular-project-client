@@ -1,3 +1,34 @@
-<p>
-  event-page works!
-</p>
+<div class="forms" *ngIf='event'>
+  <form (ngSubmit)="submitForm(FlightForm)" #FlightForm="ngForm">
+    <div>
+      <h1> Book your flight to {{ event.name.text }} </h1>
+      <h2> From: {{ user | json }}</h2>
+      <h2>To: {{ eventCity.search }}</h2>
+
+      <h2> Starting date: {{ event.start.local | date: "short" }} </h2>
+      <h2> End date: {{ event.start.local | date: "short" }}</h2>
+      <!-- <input type="text" [(ngModel)]="start" required name="location" placeholder="From" id="searchBar">
+      <input type="text" [(ngModel)]="end" required name="search" placeholder="To">
+      <input type="date" [(ngModel)]="datestart" required name="from">
+      <input type="date" [(ngModel)]="dateend" required name="to"> -->
+    </div>
+
+    <div>
+      <button type="submit" id="eventButton">Confirm your flight</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="flights">
+  <ul>
+    <li *ngFor="let flight of flights">
+      <div class="flights-card">
+        <h1>{{ event.name.text }}</h1>
+        <h2> {{ event.start.local | date: "short" }}</h2>
+
+        <button class="btn" type="submit" [routerLink]="['/event']">Book flight</button>
+      </div>
+    </li>
+  </ul>
+
+</div>
