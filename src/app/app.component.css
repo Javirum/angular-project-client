@@ -15,10 +15,6 @@ h1 {
   font-size: 0.5em;
 }
 
-h2 {}
-
-h3 {}
-
 p {
   margin: 0;
 }
@@ -103,10 +99,6 @@ header a {
   background-color: black;
   color: white;
   padding: 5%;
-}
-
-#creator {
-
 }
 
 #social-logos {
