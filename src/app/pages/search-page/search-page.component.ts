@@ -29,11 +29,8 @@ export class SearchPageComponent implements OnInit {
     if (searchForm.valid) {
       this.processing = true;
       this.searchEventsService.submit(searchForm.value)
-        .then((result) => {
-          console.log(result);
-          this.events = result[0].events;
-          this.flights = result[1].locations;
-          // this.router.navigate(['/search/events']);
+        .then((result: any) => {
+          this.events = result.events;
         })
         .catch((err) => {
           this.error = err.error;

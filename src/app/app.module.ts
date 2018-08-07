@@ -15,6 +15,7 @@ import { RequireUserGuard } from './guards/require-user-guard.service';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { EventPageComponent } from './pages/event-page/event-page.component';
+import { FlightsPageComponent } from './pages/flights-page/flights-page.component';
 
 // Components
 const routes: Routes = [
@@ -35,7 +36,8 @@ const routes: Routes = [
     LoginPageComponent,
     SearchPageComponent,
     HomePageComponent,
-    EventPageComponent
+    EventPageComponent,
+    FlightsPageComponent
   ],
   imports: [
     BrowserModule,

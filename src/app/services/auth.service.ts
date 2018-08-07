@@ -13,14 +13,13 @@ export class AuthService {
 
   private user: any;
   private userChange: Subject<any> = new Subject();
-  private API_URL = environment.apiUrl + '/auth';
 
 
   // userChange$: Observable<any> = this.userChange.asObservable();
 
 
 
-  private baseUrl = 'http://localhost:3000/auth';
+  private baseUrl = environment.apiUrl + '/auth';
   constructor(private httpClient: HttpClient) {
   }
 
@@ -67,7 +66,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/logout`, {}, options)
+    return this.httpClient.post(`${this.baseUrl}/logout`, {}, options)
       .toPromise()
       .then(() => this.setUser());
   }

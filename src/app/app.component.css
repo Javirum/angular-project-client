@@ -43,9 +43,20 @@ header a {
   text-decoration: none;
 }
 
-.logo-nav {
+#logo-nav {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  animation: move-down 5s;
+}
+
+@keyframes move-down  {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0%;
+  }
 }
 
 .nav-links {
