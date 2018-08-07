@@ -16,6 +16,7 @@ export class SearchPageComponent implements OnInit {
   query: string;
   events: any;
   flights: any;
+  end: any;
   constructor(private searchEventsService: SearchEventsService, private searchFlights: SearchFlightService, private router: Router) { }
 
 

@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class SearchEventsService {
 
-  private API_URL = 'http://localhost:3000/search';
+  private API_URL = environment.apiUrl + '/search';
 
 
   constructor(private httpClient: HttpClient) { }
