@@ -19,10 +19,6 @@ p {
   margin: 0;
 }
 
-
-
-
-
 /* ---- layout ---- */
 
 /* #site-main {
@@ -37,31 +33,31 @@ p {
 
 header {
   height: 10vh;
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 2;
+  padding: 0 5%;
+  background-color: black;
+  color: white;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  padding-top: 5%;
 }
 
 #logo {
   font-size: 1.3em;
   text-decoration: underline;
   text-decoration-color: #00c1ff;
-  padding-left: 30%;
-  padding-top: 10%;
+  justify-content: center;
 }
-
-#signup-nav {
-  grid-column: 3;
-  padding-top: 25%;
-}
-
-#login-nav {
- padding-top: 25%;
-}
-
-#explore-nav {
-  padding-top: 25%;
- }
 
 .section {
   margin-bottom: 20px;
@@ -73,23 +69,6 @@ header {
     max-width: 728px;
     margin: 0 auto;
   }
-}
-
-#menu-logo img {
-  width: 30%;
-  padding-left: 10px;
-}
-
-
-header  {
-  background-color: black;
-  color: white;
-}
-
-header a {
-  color: white;
-  text-decoration: none;
-  padding: 0 10px;
 }
 
 #site-footer {

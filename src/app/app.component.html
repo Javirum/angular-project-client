@@ -4,14 +4,15 @@
 
 
 <header id="site-header">
-  <a [routerLink]="['/']">
-    <h1 id="logo">FLOIGHT</h1>
-  </a>
-
-  <a [routerLink]="['/signup']" id="signup-nav">Signup</a>
-  <a [routerLink]="['/login']" id="login-nav">Login</a>
-  <a [routerLink]="['/search']" id="explore-nav">Explore</a>
-  <a [routerLink]="['/logout']" id="logout-nav">Logout</a>
+  <div class="logo-nav">
+    <a [routerLink]="['/']">
+      <h1 id="logo">FLOIGHT</h1>
+    </a>
+    <a [routerLink]="['/signup']" class="nav-links">Signup</a>
+    <a [routerLink]="['/login']" class="nav-links">Login</a>
+    <a [routerLink]="['/search']" class="nav-links">Explore</a>
+    <!-- <a [routerLink]="['/logout']" class="nav-links">Logout</a> -->
+  </div>
 </header>
 
 <div id="site-main" class="container">
