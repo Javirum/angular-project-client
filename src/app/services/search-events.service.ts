@@ -13,8 +13,8 @@ export class SearchEventsService {
   public eventData: any;
   public eventCity: any;
   public eventDate: any;
-  private flightOut: any;
-  private flightBack: any;
+  public flightOut: any;
+  public flightBack: any;
 
   constructor(private httpClient: HttpClient) { }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchEventsService } from '../../services/search-events.service';
 import { SearchFlightService } from '../../services/search-flight.service';
+import { Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-event-page',
@@ -21,7 +22,7 @@ export class EventPageComponent implements OnInit {
   flightOutPicked: boolean;
 
 
-  constructor(private eventService: SearchEventsService, private flightService: SearchFlightService) {
+  constructor(private eventService: SearchEventsService, private flightService: SearchFlightService, private router: Router) {
     this.event = this.eventService.getSavedEvent();
     this.eventCity = this.eventService.getSavedCity();
     this.eventDate = this.eventService.getSavedDate();
@@ -53,6 +54,13 @@ export class EventPageComponent implements OnInit {
     this.flightOutPicked = true;
 
   }
+
+  selectFlightBack(flight) {
+    this.eventService.saveFlightBack(flight);
+    this.router.navigate(['/booking']);
+  }
+
+
   ngOnInit() {
 
   }
