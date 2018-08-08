@@ -10,15 +10,20 @@ export class SearchFlightService {
 
   private API_URL = environment.apiUrl + '/search/flights';
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient, private searchFlights: SearchFlightService) { }
 
   getFlights(fromCity, toCity, date) {
     const dateStr = date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear();
 
-    return this.httpClient.get(`https://api.skypicker.com/flights?flyFrom=${fromCity}&to=${toCity}&dateFrom=${dateStr}&dateTo=${dateStr}&partner=picky`)
+    const url = `https://api.skypicker.com/flights?flyFrom=${fromCity}&to=${toCity}&dateFrom=${dateStr}&dateTo=${dateStr}&partner=picky`;
+    return this.httpClient.get(url)
       .toPromise()
-      .then((result) => {
-        console.log(result)
+      .then((results: any) => {
+        results.data = results.data.map((item) => {
+          item.departure = new Date(item.dTime * 1000);
+          return item;
+        });
+        return results;
       })
       .catch();
   }

@@ -13,6 +13,7 @@ export class SearchEventsService {
   public eventData: any;
   public eventCity: any;
   public eventDate: any;
+  private flightOut: any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -60,6 +61,11 @@ export class SearchEventsService {
     const dayBefore = this.eventData.end.date + ONE_DAY * xDaysAfter;
     return new Date(dayBefore);
   }
+
+  saveFlightOut(flight) {
+    this.flightOut = flight;
+  }
+
 }
 
 

@@ -1,34 +1,47 @@
-<div class="forms" *ngIf='event'>
+<!-- <div class="forms" *ngIf='event'>
   <form (ngSubmit)="submitForm(FlightForm)" #FlightForm="ngForm">
     <div>
-      <h1> Book your flight to {{ event.name.text }} </h1>
-      <h2> From: {{ user | json }}</h2>
+      <h1> Searching for flights to {{ event.name.text }} </h1>
+      <h2> From: Barcelona </h2>
       <h2>To: {{ eventCity.search }}</h2>
 
       <h2> Starting date: {{ event.start.local | date: "short" }} </h2>
-      <h2> End date: {{ event.start.local | date: "short" }}</h2>
-      <!-- <input type="text" [(ngModel)]="start" required name="location" placeholder="From" id="searchBar">
-      <input type="text" [(ngModel)]="end" required name="search" placeholder="To">
-      <input type="date" [(ngModel)]="datestart" required name="from">
-      <input type="date" [(ngModel)]="dateend" required name="to"> -->
+      <h2> End date: {{ event.end.local | date: "short" }}</h2>
     </div>
 
-    <div>
-      <button type="submit" id="eventButton">Confirm your flight</button>
-    </div>
+  </form>
+</div> -->
+
+
+
+<div *ngIf="flightsOut && !flightOutPicked" class="flightsout-card">
+  <h1> Flights from Barcelona to {{ eventCity.search }}</h1>
+  <form>
+    <ul>
+      <li *ngFor="let flight of flightsOut">
+        <div class="flights-card">
+          <h1>
+            <strong>Departure:</strong> {{ flight.departure | date:'short' }} </h1>
+          <h1>
+            <strong>Duration:</strong> {{ flight.fly_duration }} </h1>
+          <h1>
+            <strong>Price: </strong> {{ flight.price }}€</h1>
+          <button class="btn" (click)="selectFlightOut(flight)" class="btn">Select flight</button>
+        </div>
+      </li>
+    </ul>
   </form>
 </div>
 
-<div *ngIf="flights">
-  <ul>
-    <li *ngFor="let flight of flights">
-      <div class="flights-card">
-        <h1>{{ event.name.text }}</h1>
-        <h2> {{ event.start.local | date: "short" }}</h2>
 
-        <button class="btn" type="submit" [routerLink]="['/event']">Book flight</button>
+<div *ngIf="flightsBack && flightOutPicked" class="flightsBack-card">
+  <h1> Flights from {{ eventCity.search }} to Barcelona </h1>
+  <ul>
+    <li *ngFor="let flight of flightsBack">
+      <div class="flights-card">
+        <h2> Price: {{ flights.price }}</h2>
+        <button class="btn" type="submit">Book flight</button>
       </div>
     </li>
   </ul>
-
 </div>

@@ -1,0 +1,21 @@
+
+form {
+  background-color: #00c1ff;
+  color: black;
+  margin-left: 10%;
+
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.flightsout-card {
+  padding-top: 10%;
+}
+
+
+.flightsback-card {
+  background-color: red;
+}

@@ -18,6 +18,7 @@ export class EventPageComponent implements OnInit {
   loaded: any;
   flightsOut: any;
   flightsBack: any;
+  flightOutPicked: boolean;
 
 
   constructor(private eventService: SearchEventsService, private flightService: SearchFlightService) {
@@ -29,23 +30,28 @@ export class EventPageComponent implements OnInit {
     this.endDate = this.eventService.getFlightBackDate();
 
 
-    // this.fromCity = needs to be set from user;
+    // this.fromCity = needs to be set from user. For now its hardecoded;
 
     console.log(this.event);
     console.log(this.eventCity);
     this.flightService.getFlights('barcelona', this.toCity, this.startDate)
-      .then(resultsOut => {
+      .then((resultsOut: any) => {
         console.log(resultsOut);
         this.flightService.getFlights('barcelona', this.toCity, this.endDate)
-          .then(resultsBack => {
+          .then((resultsBack: any) => {
             console.log(resultsBack);
             this.loaded = true;
             this.flightsOut = resultsOut.data;
             this.flightsBack = resultsBack.data;
-
-          })
+          });
       })
       .catch(error => console.log(error));
+  }
+
+  selectFlightOut(flight) {
+    this.eventService.saveFlightOut(flight);
+    this.flightOutPicked = true;
+
   }
   ngOnInit() {
 
