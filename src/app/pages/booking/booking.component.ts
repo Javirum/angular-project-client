@@ -10,9 +10,9 @@ import { SearchFlightService } from '../../services/search-flight.service';
 export class BookingComponent implements OnInit {
   private flightOut: any;
   private flightBack: any;
-  private flightOutUrl: any;
-  private flightBackUrl: any;
-  private eventUrl: any;
+  public flightOutUrl: any;
+  public flightBackUrl: any;
+  public eventUrl: any;
   constructor(private searchEventsService: SearchEventsService, private searchFlights: SearchFlightService) {
 
     this.flightOut = this.searchEventsService.flightOut;
