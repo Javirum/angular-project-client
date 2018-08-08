@@ -12,35 +12,43 @@
   </form>
 </div> -->
 
-
-
-<div *ngIf="flightsOut && !flightOutPicked" class="flightsout-card">
+<div class="forms">
   <h1> Flights from Barcelona to {{ eventCity.search }}</h1>
-  <form>
-    <ul>
-      <li *ngFor="let flight of flightsOut">
-        <div class="flights-card">
-          <h1>
-            <strong>Departure:</strong> {{ flight.departure | date:'short' }} </h1>
-          <h1>
-            <strong>Duration:</strong> {{ flight.fly_duration }} </h1>
-          <h1>
-            <strong>Price: </strong> {{ flight.price }}€</h1>
-          <button class="btn" (click)="selectFlightOut(flight)" class="btn">Select flight</button>
-        </div>
-      </li>
-    </ul>
-  </form>
+</div>
+<div *ngIf="flightsOut && !flightOutPicked" class="flightsout-card">
+  <ul>
+    <li *ngFor="let flight of flightsOut">
+      <div class="flights-card">
+        <h1>
+          <strong>Departure:</strong> {{ flight.departure | date:'short' }} </h1>
+        <h1>
+          <strong>Duration:</strong> {{ flight.fly_duration }} </h1>
+        <h1>
+          <strong>Price: </strong> {{ flight.price }}€</h1>
+        <button class="btn" (click)="selectFlightOut(flight)" class="btn">Select flight</button>
+        <hr>
+      </div>
+    </li>
+  </ul>
 </div>
 
 
+<div class="forms">
+  <h1 *ngIf="flightsOut"> Flights from {{ eventCity.search }} to Barcelona </h1>
+</div>
 <div *ngIf="flightsBack && flightOutPicked" class="flightsBack-card">
-  <h1> Flights from {{ eventCity.search }} to Barcelona </h1>
   <ul>
     <li *ngFor="let flight of flightsBack">
       <div class="flights-card">
-        <h2> Price: {{ flights.price }}</h2>
-        <button class="btn" type="submit">Book flight</button>
+        <h1>
+          <strong>Departure:</strong> {{ flight.departure | date:'short' }} </h1>
+        <h1>
+          <strong>Duration:</strong> {{ flight.fly_duration }} </h1>
+        <h1>
+          <strong>Price: </strong> {{ flight.price }}€</h1>
+
+        <button type="submit" class="btn" (click)="selectFlightBack(flight)" class="btn">Select flight</button>
+        <hr>
       </div>
     </li>
   </ul>

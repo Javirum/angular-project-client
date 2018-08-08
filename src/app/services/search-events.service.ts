@@ -14,6 +14,7 @@ export class SearchEventsService {
   public eventCity: any;
   public eventDate: any;
   private flightOut: any;
+  private flightBack: any;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -64,6 +65,10 @@ export class SearchEventsService {
 
   saveFlightOut(flight) {
     this.flightOut = flight;
+  }
+
+  saveFlightBack(flight) {
+    this.flightBack = flight;
   }
 
 }

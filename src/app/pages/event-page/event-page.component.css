@@ -1,21 +1,36 @@
 
-form {
-  background-color: #00c1ff;
-  color: black;
-  margin-left: 10%;
 
-  text-align: center;
-}
 
 ul {
+  padding: 0;
   list-style-type: none;
 }
 
 .flightsout-card {
   padding-top: 10%;
+  background-color: white;
+  border: 5px solid black;
+  margin-bottom: 5%;
+  width: 92%;
+  margin-left: 4%;
 }
 
 
-.flightsback-card {
-  background-color: red;
+.flightsBack-card {
+  padding-top: 10%;
+  background-color: white;
+  border: 5px solid black;
+  margin-bottom: 5%;
+  width: 92%;
+  margin-left: 4%;
+}
+
+.btn {
+  background-color: yellow;
+  width: 70%;
+  margin-left: 15%;
+}
+
+hr {
+  border: 2px solid black;
 }
