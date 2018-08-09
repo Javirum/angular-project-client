@@ -7,6 +7,10 @@
 background-color: black;
 }
 
+a {
+  color: black;
+}
+
 #event-booking {
   background-color: yellow;
   border: 1px solid black;
@@ -27,6 +31,7 @@ background-color: black;
   color: white;
   position: relative;
   animation: move-right 6s;
+  color: black;
 }
 
 #flight-back-booking {
@@ -38,6 +43,7 @@ background-color: black;
   color: white;
   position: relative;
   animation: move-left 7s;
+  color: black;
 }
 
 @keyframes move-right  {
