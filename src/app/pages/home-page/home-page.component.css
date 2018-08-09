@@ -35,7 +35,7 @@ h1 {
   grid-row: 1;
   background-color: white;
   position: relative;
-  animation: move-right 3s;
+  animation: move-right 1s;
 }
 
 
@@ -47,7 +47,7 @@ h1 {
   color: white;
   font-size: 1em;
   position: relative;
-  animation: move-down 5s;
+  animation: move-down 2s;
 
 }
 .three {
@@ -55,7 +55,7 @@ h1 {
   grid-row: 2 / 4;
   background-color: red;
   position: relative;
-  animation: move-right 5s;
+  animation: move-right 2s;
 }
 
 .four {
@@ -63,7 +63,7 @@ h1 {
   grid-row: 1;
   background-color: #00c1ff;
   position: relative;
-  animation: move-left 3s;
+  animation: move-left 1s;
 
 }
 .five {
@@ -71,7 +71,7 @@ h1 {
   grid-row: 2;
   background-color: yellow;
   position: relative;
-  animation: move-left 5s;
+  animation: move-left 2s;
 
 }
 .six {
@@ -79,7 +79,7 @@ h1 {
   grid-row: 3;
   background-color: white;
   position: relative;
-  animation: move-up 5s;
+  animation: move-up 2s;
 
 }
 
@@ -88,7 +88,7 @@ h1 {
   grid-row: 3;
   background-color: yellow;
   position: relative;
-  animation: move-right 5s;
+  animation: move-right 2s;
 
 }
 
@@ -97,7 +97,7 @@ h1 {
   grid-row: 4;
   background-color: white;
   position: relative;
-  animation: move-up 3s;
+  animation: move-up 1s;
 
 }
 
@@ -106,7 +106,7 @@ h1 {
   grid-row: 4;
   background-color: red;
   position: relative;
-  animation: move-left 5s;
+  animation: move-left 2s;
 
 }
 
@@ -115,7 +115,7 @@ h1 {
   grid-row: 1;
   background-color: red;
   position: relative;
-  animation: move-down 5s;
+  animation: move-down 2.5s;
 }
 
 @keyframes move-right  {
