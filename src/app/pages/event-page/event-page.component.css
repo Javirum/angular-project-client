@@ -13,6 +13,7 @@ ul {
   margin-bottom: 5%;
   width: 92%;
   margin-left: 4%;
+  padding-top: 10%; 
 }
 
 
@@ -33,4 +34,22 @@ ul {
 
 hr {
   border: 2px solid black;
+}
+
+.searching-flights {
+  padding: 10%;
+  background-color: yellow;
+  border: 5px solid black;
+  margin: 10%;
+  margin-bottom: 55%;
+}
+
+.select-flight {
+  background-color: #00c1ff;
+  border: 5px solid black;
+  margin: 5%;
+}
+
+h1 {
+  margin-bottom: 8%;
 }

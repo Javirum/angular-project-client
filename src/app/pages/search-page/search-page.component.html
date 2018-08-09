@@ -13,6 +13,10 @@
   </form>
 </div>
 
+<div class="select-flight" *ngIf="events">
+  <h1>Select an event</h1>
+</div>
+
 <div *ngIf="events">
   <ul>
     <li *ngFor="let event of events">

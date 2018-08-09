@@ -12,9 +12,14 @@
   </form>
 </div> -->
 
-<div class="forms">
-  <h1> Flights from Barcelona to {{ eventCity.search }}</h1>
+<div class="searching-flights" *ngIf="!flightsOut">
+  <h1> Searching for flights from Barcelona to {{ eventCity.search }}...</h1>
 </div>
+
+<div class="select-flight" *ngIf="flightsOut && !flightOutPicked">
+  <h1>Select your departing flight from Barcelona to {{ eventCity.search }}</h1>
+</div>
+
 <div *ngIf="flightsOut && !flightOutPicked" class="flightsout-card">
   <ul>
     <li *ngFor="let flight of flightsOut">
@@ -32,9 +37,8 @@
   </ul>
 </div>
 
-
-<div class="forms">
-  <h1 *ngIf="flightsOut"> Flights from {{ eventCity.search }} to Barcelona </h1>
+<div class="select-flight" *ngIf="flightsBack">
+  <h1>Select your arriving flight from {{ eventCity.search }} to Barcelona</h1>
 </div>
 <div *ngIf="flightsBack && flightOutPicked" class="flightsBack-card">
   <ul>
