@@ -3,7 +3,7 @@
   grid-template-columns: repeat(5,1fr);;
   grid-template-rows: repeat(10,1fr);
   width: 100vw;
-  height: 200vh;
+  height: 220vh;
 background-color: black;
 }
 
@@ -48,7 +48,7 @@ h1 {
   font-size: 1em;
   position: relative;
   animation: move-down 2s;
-
+  padding-top: 40%;
 }
 .three {
   grid-column: 1;
@@ -167,23 +167,23 @@ h1 {
 
 #steps {
   display: flex;
-  background-color: white;
+  background-color: black;
   color: black;
   grid-column: 1 / 6;
   grid-row: 6 / 8;
   text-align: center;
-  padding-top: 25px;
   border: 5px solid black;
   margin: 0 3%;
-  margin-bottom: 5%;
 }
 
 #steps i {
   font-size: 3em;
+  padding-top: 8%;
 }
 
 #steps p {
   font-size: 30px;
+  font-family: Roboto;
 }
 
 
@@ -191,11 +191,27 @@ h1 {
 width: 33%;
 }
 
+#step-event {
+  background-color: red;
+  border: 5px solid black;
+}
+
+#step-flight {
+  background-color: yellow;
+  border: 5px solid black;
+}
+
+#step-trip {
+  background-color: #00c1ff;
+  border: 5px solid black;
+}
+
 .login {
   grid-column: 2 / 6;
   grid-row: 8;
   background-color: red;
   margin-right: 5%;
+  color: black;
 }
 
 .signup {
@@ -237,8 +253,8 @@ a {
 }
 
 #slide-down {
-  padding-top: 5%;
-  font-size: 2em;
+  padding-top: 8%;
+  font-size: 2.3em;
   position: relative;
   animation: move-down 5s;  
   animation: bounce 1s;
