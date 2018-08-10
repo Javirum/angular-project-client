@@ -1,17 +1,3 @@
-<!-- <div class="forms" *ngIf='event'>
-  <form (ngSubmit)="submitForm(FlightForm)" #FlightForm="ngForm">
-    <div>
-      <h1> Searching for flights to {{ event.name.text }} </h1>
-      <h2> From: Barcelona </h2>
-      <h2>To: {{ eventCity.search }}</h2>
-
-      <h2> Starting date: {{ event.start.local | date: "short" }} </h2>
-      <h2> End date: {{ event.end.local | date: "short" }}</h2>
-    </div>
-
-  </form>
-</div> -->
-
 <div class="searching-flights" *ngIf="!flightsOut">
   <h1> Searching for flights from Barcelona to {{ eventCity.search }}...</h1>
 </div>
