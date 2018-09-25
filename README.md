@@ -4,7 +4,7 @@ Floight
 
 ## Descriptions
 
-The airline for music lovers
+The website for travel lovers
 
 ## User Stories
 
@@ -47,8 +47,6 @@ Suggest concerts you might like based on your favourites and profile
 Spotify:
 Connect with your spotify account to get recommendations based on your favourite bands, genres etc.
 
-Bookings:
-Event and flights booking.
 
 Payments:
 Paywall certain sections of the site (eg. flights and tickets)
@@ -76,15 +74,17 @@ GET /events/city/:id - id is a listing id
 User:
 Username
 Password
+Location
 
 Events:
-Artist
+Title
 Location
+Date
+
+Flight:
 Date
 Price
 
-Flight:
-Destination
-Price
 
-
+## DEPLOY:
+https://floight.herokuapp.com/
